@@ -1,0 +1,85 @@
+site_name: AI Engineering Learning Lab
+site_description: A beginner-first path from software engineering to professional AI and on-device ML.
+site_url: http://127.0.0.1:8000
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.arithmatex:
+      generic: true
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - https://unpkg.com/mermaid@11/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+  - javascripts/lesson-interactions.js
+nav:
+  - Home: index.md
+  - How to learn: how-to-learn.md
+  - Curriculum map: curriculum-map.md
+  - Resource library: resource-library.md
+  - Optional foundations route: plan/optional-foundations-order.md
+  - Progress: progress.md
+  - Topics:
+      - topics/index.md
+      - Foundations:
+          - Foundations overview: topics/foundations.md
+          - Learning notes: lessons/index.md
+          - AI mental models: lessons/ai-mental-models.md
+          - How learning works: lessons/learning-loop.md
+          - Python and reproducibility: lessons/python-reproducibility.md
+      - Machine learning: topics/machine-learning.md
+      - Deep learning: topics/deep-learning.md
+      - Generative AI and LLMs: topics/generative-ai.md
+      - AI engineering: topics/ai-engineering.md
+      - On-device AI/ML: topics/on-device-ai.md
+      - Specializations: topics/specializations.md
+      - Research and career: topics/research-career.md
+  - Glossary: glossary.md
+

@@ -1,0 +1,700 @@
+{
+  "schema_version": 1,
+  "progress_policy": "Pacing is optional; progress is recorded per subtopic from demonstrated mastery and evidence.",
+  "topics": [
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "path": "docs/topics/foundations.md",
+      "subtopics": [
+        {
+          "id": "ai-mental-models",
+          "title": "AI mental models",
+          "prerequisites": [],
+          "learning_units": [
+            "Rules versus learning from examples",
+            "Data, features, and labels",
+            "Models, training, and inference",
+            "Prediction, error, and improvement",
+            "Evaluation and limitations",
+            "Uncertainty and impact"
+          ]
+        },
+        {
+          "id": "python-for-ai",
+          "title": "Python for AI",
+          "prerequisites": [],
+          "learning_units": [
+            "Values and types",
+            "Conditions and loops",
+            "Functions and modules",
+            "Files and exceptions",
+            "Debugging and small tests",
+            "Reproducible experiments"
+          ]
+        },
+        {
+          "id": "numerical-computing",
+          "title": "Numerical computing",
+          "prerequisites": [
+            "python-for-ai"
+          ],
+          "learning_units": [
+            "Arrays, shapes, and dtypes",
+            "Indexing and axes",
+            "Broadcasting and vectorization",
+            "Vectors and matrices",
+            "Numerical behavior"
+          ]
+        },
+        {
+          "id": "data-analysis",
+          "title": "Data analysis",
+          "prerequisites": [
+            "numerical-computing"
+          ],
+          "learning_units": [
+            "Pandas and DataFrames",
+            "Data contracts and cleaning",
+            "Grouping and joins",
+            "Distributions and visualization",
+            "Interpretation and limits"
+          ]
+        },
+        {
+          "id": "mathematics",
+          "title": "Mathematics",
+          "prerequisites": [],
+          "learning_units": [
+            "Linear algebra",
+            "Functions and graphs",
+            "Derivatives and gradients",
+            "Probability",
+            "Statistics and sampling",
+            "Optimization"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "title": "Machine Learning",
+      "path": "docs/topics/machine-learning.md",
+      "subtopics": [
+        {
+          "id": "problem-framing",
+          "title": "Problem framing and baselines",
+          "prerequisites": [
+            "ai-mental-models"
+          ],
+          "learning_units": [
+            "Translate a decision",
+            "Define the prediction contract",
+            "Check information timing",
+            "Set a baseline",
+            "Describe error costs"
+          ]
+        },
+        {
+          "id": "data-preparation",
+          "title": "Data preparation and leakage-safe pipelines",
+          "prerequisites": [
+            "problem-framing",
+            "python-for-ai",
+            "data-analysis"
+          ],
+          "learning_units": [
+            "Inspect the data",
+            "Write a data contract",
+            "Choose a credible split",
+            "Fit preprocessing safely",
+            "Build a reproducible pipeline"
+          ]
+        },
+        {
+          "id": "regression",
+          "title": "Regression",
+          "prerequisites": [
+            "data-preparation"
+          ],
+          "learning_units": [
+            "Fit baseline and regression models",
+            "Interpret coefficients",
+            "Measure prediction errors",
+            "Inspect residual patterns",
+            "Constrain complexity and describe uncertainty"
+          ]
+        },
+        {
+          "id": "classification",
+          "title": "Classification",
+          "prerequisites": [
+            "data-preparation"
+          ],
+          "learning_units": [
+            "Fit a classification baseline",
+            "Interpret scores and thresholds",
+            "Read classification metrics",
+            "Compare thresholds and ranking",
+            "Check calibration and slices"
+          ]
+        },
+        {
+          "id": "trees-and-ensembles",
+          "title": "Trees and ensembles",
+          "prerequisites": [
+            "data-preparation"
+          ],
+          "learning_units": [
+            "Trace a decision tree",
+            "Recognize overfitting",
+            "Explain tree ensembles",
+            "Tune model settings",
+            "Interpret feature importance"
+          ],
+          "prerequisites_any_of": [
+            [
+              "classification",
+              "regression"
+            ]
+          ]
+        },
+        {
+          "id": "clustering-and-representation",
+          "title": "Clustering and representation",
+          "prerequisites": [
+            "mathematics",
+            "data-preparation"
+          ],
+          "learning_units": [
+            "Compare feature distances",
+            "Scale features",
+            "Fit k-means",
+            "Visualize representations",
+            "Validate cluster usefulness"
+          ]
+        },
+        {
+          "id": "evaluation-and-generalization",
+          "title": "Evaluation, generalization, and deployment decisions",
+          "prerequisites": [
+            "problem-framing",
+            "data-preparation"
+          ],
+          "learning_units": [
+            "Separate data roles",
+            "Choose an appropriate split",
+            "Use cross-validation safely",
+            "Diagnose generalization problems",
+            "Analyze slice-level errors",
+            "Document deployment limits"
+          ],
+          "prerequisites_any_of": [
+            [
+              "classification",
+              "regression"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "deep-learning",
+      "title": "Deep Learning",
+      "path": "docs/topics/deep-learning.md",
+      "subtopics": [
+        {
+          "id": "tensors",
+          "title": "Tensors and shapes",
+          "prerequisites": [
+            "python-for-ai"
+          ],
+          "learning_units": [
+            "Tensor dimensions and batches",
+            "Tensor operations and devices"
+          ]
+        },
+        {
+          "id": "neural-networks",
+          "title": "Neural networks and forward computation",
+          "prerequisites": [
+            "tensors"
+          ],
+          "learning_units": [
+            "Neurons, layers, and activations",
+            "Forward pass and logits"
+          ]
+        },
+        {
+          "id": "loss-functions",
+          "title": "Loss functions and learning signals",
+          "prerequisites": [
+            "neural-networks"
+          ],
+          "learning_units": [
+            "Loss as an objective",
+            "Regression and classification losses"
+          ]
+        },
+        {
+          "id": "backpropagation",
+          "title": "Backpropagation and gradients",
+          "prerequisites": [
+            "loss-functions"
+          ],
+          "learning_units": [
+            "Computational graphs",
+            "Chain rule and gradients",
+            "Gradient checking"
+          ]
+        },
+        {
+          "id": "optimizers",
+          "title": "Optimizers, training, and generalization",
+          "prerequisites": [
+            "backpropagation"
+          ],
+          "learning_units": [
+            "Gradient descent and learning rate",
+            "Minibatches, momentum, and Adam",
+            "Initialization, normalization, and regularization"
+          ]
+        },
+        {
+          "id": "convolutional-neural-networks",
+          "title": "Convolutional neural networks",
+          "prerequisites": [
+            "tensors",
+            "neural-networks",
+            "optimizers"
+          ],
+          "learning_units": [
+            "Convolution, stride, and padding",
+            "Pooling and image classifiers"
+          ]
+        },
+        {
+          "id": "sequence-models-and-embeddings",
+          "title": "Sequence models and embeddings",
+          "prerequisites": [
+            "tensors",
+            "neural-networks"
+          ],
+          "learning_units": [
+            "Embeddings and representation learning",
+            "Sequence models and recurrent state"
+          ],
+          "prerequisites_any_of": [
+            [
+              "classification",
+              "regression"
+            ]
+          ]
+        },
+        {
+          "id": "transformers",
+          "title": "Transformers and attention",
+          "prerequisites": [
+            "sequence-models-and-embeddings",
+            "neural-networks"
+          ],
+          "learning_units": [
+            "Queries, keys, and values",
+            "Masks, positions, and transformer blocks",
+            "Transformer computation and cost"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "generative-ai",
+      "title": "Generative AI and LLMs",
+      "path": "docs/topics/generative-ai.md",
+      "subtopics": [
+        {
+          "id": "language-model-foundations",
+          "title": "Language-model foundations",
+          "prerequisites": [
+            "python-for-ai",
+            "mathematics"
+          ],
+          "learning_units": [
+            "Tokens, token IDs, and vocabulary",
+            "Embeddings and next-token prediction",
+            "Decoding and context windows"
+          ]
+        },
+        {
+          "id": "transformer-internals",
+          "title": "Transformer internals",
+          "prerequisites": [
+            "language-model-foundations",
+            "mathematics"
+          ],
+          "learning_units": [
+            "Self-attention and causal masks",
+            "Positions, feed-forward layers, and residuals",
+            "Inference and context cost"
+          ]
+        },
+        {
+          "id": "model-lifecycle",
+          "title": "Model lifecycle and selection",
+          "prerequisites": [
+            "language-model-foundations"
+          ],
+          "learning_units": [
+            "Pretraining and instruction tuning",
+            "Fine-tuning, adapters, and preference optimization",
+            "Quantization, model selection, and licensing"
+          ]
+        },
+        {
+          "id": "llm-application-patterns",
+          "title": "Application patterns",
+          "prerequisites": [
+            "language-model-foundations"
+          ],
+          "learning_units": [
+            "Prompting and structured output",
+            "Retrieval-augmented generation",
+            "Tool calling, agents, and memory"
+          ]
+        },
+        {
+          "id": "llm-evaluation-safety",
+          "title": "Evaluation and safety",
+          "prerequisites": [
+            "llm-application-patterns"
+          ],
+          "learning_units": [
+            "Golden datasets and task rubrics",
+            "Groundedness, citations, and refusal",
+            "Prompt injection, leakage, and regression"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-engineering",
+      "title": "AI engineering",
+      "path": "docs/topics/ai-engineering.md",
+      "subtopics": [
+        {
+          "id": "system-boundaries",
+          "title": "System boundaries and data contracts",
+          "prerequisites": [
+            "llm-application-patterns"
+          ],
+          "learning_units": [
+            "Model, data, tool, and application boundaries",
+            "Data contracts and provenance"
+          ]
+        },
+        {
+          "id": "serving",
+          "title": "Serving and reliability",
+          "prerequisites": [
+            "system-boundaries"
+          ],
+          "learning_units": [
+            "APIs and model serving",
+            "Streaming, batching, and backpressure",
+            "Caching, timeout, retries, and fallbacks",
+            "Version rollout and rollback",
+            "Idempotency and rate limits",
+            "Incident response"
+          ]
+        },
+        {
+          "id": "evaluation-pipelines",
+          "title": "Evaluation pipelines and observability",
+          "prerequisites": [
+            "serving",
+            "llm-evaluation-safety"
+          ],
+          "learning_units": [
+            "Offline evaluation and regression tests",
+            "Online signals and human review",
+            "Release gates and slice analysis",
+            "Quality, latency, and cost signals",
+            "Tracing and privacy-safe logs",
+            "Drift and feedback loops"
+          ]
+        },
+        {
+          "id": "security",
+          "title": "Security and abuse resistance",
+          "prerequisites": [
+            "system-boundaries",
+            "llm-application-patterns"
+          ],
+          "learning_units": [
+            "Secrets and access control",
+            "Injection and data exfiltration",
+            "Supply chain and abuse prevention"
+          ]
+        },
+        {
+          "id": "cost-and-scale",
+          "title": "Cost and scale",
+          "prerequisites": [
+            "serving"
+          ],
+          "learning_units": [
+            "Capacity and unit economics",
+            "Routing, caching, and batching"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "on-device-ai",
+      "title": "On-device AI/ML",
+      "path": "docs/topics/on-device-ai.md",
+      "subtopics": [
+        {
+          "id": "mobile-inference-contract",
+          "title": "Mobile inference contract",
+          "prerequisites": [
+            "tensors",
+            "evaluation-and-generalization"
+          ],
+          "learning_units": [
+            "Preprocessing and postprocessing",
+            "Model versioning and Kotlin boundaries"
+          ]
+        },
+        {
+          "id": "model-formats-conversion",
+          "title": "Model formats, conversion, and runtimes",
+          "prerequisites": [
+            "mobile-inference-contract",
+            "tensors"
+          ],
+          "learning_units": [
+            "SavedModel, LiteRT, ONNX, and Core ML",
+            "Conversion and operator compatibility",
+            "LiteRT and MediaPipe",
+            "GPU/NPU delegates and acceleration",
+            "Runtime lifecycle and threading"
+          ]
+        },
+        {
+          "id": "model-compression",
+          "title": "Compression and quality budgets",
+          "prerequisites": [
+            "model-formats-conversion",
+            "model-lifecycle",
+            "evaluation-and-generalization"
+          ],
+          "learning_units": [
+            "Post-training and aware quantization",
+            "Pruning and distillation"
+          ]
+        },
+        {
+          "id": "mobile-performance",
+          "title": "Performance and benchmarking",
+          "prerequisites": [
+            "model-formats-conversion"
+          ],
+          "learning_units": [
+            "Cold start, steady-state latency, and throughput",
+            "Memory, battery, and thermal behavior",
+            "Repeatable device benchmarking"
+          ]
+        },
+        {
+          "id": "mobile-product-behavior",
+          "title": "Mobile product behavior and multimodal features",
+          "prerequisites": [
+            "mobile-inference-contract",
+            "system-boundaries",
+            "serving"
+          ],
+          "learning_units": [
+            "Offline behavior and privacy",
+            "Model downloads, updates, and fallbacks",
+            "Consent and accessibility",
+            "Camera, audio, and sensor inputs",
+            "Multimodal orchestration"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specializations",
+      "title": "Specializations",
+      "path": "docs/topics/specializations.md",
+      "subtopics": [
+        {
+          "id": "specialization-computer-vision",
+          "title": "Computer vision",
+          "prerequisites": [
+            "numerical-computing",
+            "mathematics"
+          ],
+          "learning_units": [
+            "Image representations and geometry",
+            "Vision evaluation and robustness"
+          ],
+          "prerequisites_any_of": [
+            [
+              "classification",
+              "regression"
+            ]
+          ]
+        },
+        {
+          "id": "specialization-speech-audio",
+          "title": "Speech and audio",
+          "prerequisites": [
+            "numerical-computing",
+            "mathematics",
+            "evaluation-and-generalization"
+          ],
+          "learning_units": [
+            "Audio signals and features",
+            "Recognition and generation tasks"
+          ]
+        },
+        {
+          "id": "specialization-multimodal",
+          "title": "Multimodal AI",
+          "prerequisites": [
+            "language-model-foundations"
+          ],
+          "prerequisites_any_of": [
+            [
+              "specialization-computer-vision",
+              "specialization-speech-audio"
+            ]
+          ],
+          "learning_units": [
+            "Cross-modal representations",
+            "Grounding and evaluation"
+          ]
+        },
+        {
+          "id": "specialization-diffusion",
+          "title": "Diffusion and generation",
+          "prerequisites": [
+            "mathematics",
+            "neural-networks"
+          ],
+          "learning_units": [
+            "Iterative denoising",
+            "Conditioning, controls, and safety"
+          ]
+        },
+        {
+          "id": "specialization-recommendation",
+          "title": "Recommendation",
+          "prerequisites": [
+            "data-analysis",
+            "mathematics"
+          ],
+          "learning_units": [
+            "Ranking and feedback",
+            "Recommendation evaluation"
+          ],
+          "prerequisites_any_of": [
+            [
+              "classification",
+              "regression"
+            ]
+          ]
+        },
+        {
+          "id": "specialization-reinforcement-learning",
+          "title": "Reinforcement learning",
+          "prerequisites": [
+            "mathematics",
+            "python-for-ai"
+          ],
+          "learning_units": [
+            "States, actions, and rewards",
+            "Policies and delayed reward"
+          ]
+        },
+        {
+          "id": "specialization-graph-ml",
+          "title": "Graph machine learning",
+          "prerequisites": [
+            "mathematics",
+            "evaluation-and-generalization",
+            "python-for-ai"
+          ],
+          "learning_units": [
+            "Nodes, edges, and graph features",
+            "Message passing and graph evaluation"
+          ]
+        },
+        {
+          "id": "specialization-efficient-inference",
+          "title": "Efficient inference",
+          "prerequisites": [
+            "model-lifecycle",
+            "evaluation-and-generalization"
+          ],
+          "learning_units": [
+            "Profiling and bottlenecks",
+            "Quantization, batching, and caching"
+          ]
+        },
+        {
+          "id": "specialization-privacy-ml",
+          "title": "Privacy-preserving ML",
+          "prerequisites": [
+            "mathematics",
+            "security",
+            "evaluation-and-generalization"
+          ],
+          "learning_units": [
+            "Privacy threats and data minimization",
+            "Federated and privacy-aware methods"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "research-career",
+      "title": "Research, open source, and career",
+      "path": "docs/topics/research-career.md",
+      "subtopics": [
+        {
+          "id": "research-practice",
+          "title": "Research literacy and paper reproduction",
+          "prerequisites": [
+            "evaluation-and-generalization",
+            "python-for-ai",
+            "mathematics"
+          ],
+          "learning_units": [
+            "Reading papers in passes",
+            "Reproduction, ablations, and reporting"
+          ]
+        },
+        {
+          "id": "open-source-practice",
+          "title": "Open source practice",
+          "prerequisites": [],
+          "learning_units": [
+            "Project conventions and contribution rules",
+            "Tests, docs, and measured changes"
+          ]
+        },
+        {
+          "id": "portfolio-career",
+          "title": "Career case studies and system design",
+          "prerequisites": [],
+          "learning_units": [
+            "Evidence-based project case studies",
+            "System design and interview practice"
+          ]
+        }
+      ]
+    }
+  ]
+}

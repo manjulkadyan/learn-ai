@@ -1,0 +1,27 @@
+:root {
+  --lab-indigo: #3949ab;
+  --lab-teal: #00897b;
+  --lab-ink: #1f2937;
+}
+
+.md-typeset h1 { letter-spacing: -0.02em; }
+.md-typeset .lesson-demo {
+  border: 1px solid color-mix(in srgb, var(--lab-indigo) 35%, transparent);
+  border-radius: 0.8rem;
+  padding: 1rem 1.2rem;
+  background: color-mix(in srgb, var(--lab-indigo) 7%, transparent);
+  margin: 1.2rem 0;
+}
+.demo-heading { display: flex; justify-content: space-between; gap: 1rem; align-items: center; }
+.demo-badge { color: white; background: var(--lab-teal); border-radius: 999px; padding: 0.2rem 0.7rem; font-size: 0.8rem; }
+.lesson-demo input { width: 100%; accent-color: var(--lab-indigo); }
+.demo-explanation { margin-bottom: 0; }
+
+.md-typeset .mermaid {
+  overflow-x: auto;
+  margin: 1.2rem 0;
+}
+.md-typeset .mermaid svg {
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 430" role="img" aria-labelledby="title desc">
+  <title id="title">Normal software compared with machine learning</title>
+  <desc id="desc">The top row shows an input passing through a human-written rule to an output. The bottom row shows labeled examples passing through training to a model, then a new input passing through the model to a prediction.</desc>
+  <style>
+    .ink { fill: #1f2937; font: 600 20px system-ui, sans-serif; }
+    .small { fill: #4b5563; font: 16px system-ui, sans-serif; }
+    .box { fill: #eef2ff; stroke: #3949ab; stroke-width: 3; }
+    .box2 { fill: #e0f2f1; stroke: #00897b; stroke-width: 3; }
+    .arrow { stroke: #64748b; stroke-width: 4; marker-end: url(#arrow); }
+    .pulse { fill: #f59e0b; }
+  </style>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#64748b"/></marker>
+  </defs>
+  <rect width="1000" height="430" rx="24" fill="#ffffff"/>
+  <text x="35" y="42" class="ink">Two ways to produce behavior</text>
+  <text x="35" y="83" class="small">The visual difference is where the decision logic comes from.</text>
+  <text x="35" y="135" class="ink">Normal software</text>
+  <rect x="35" y="155" width="200" height="100" rx="16" class="box"/>
+  <text x="135" y="195" text-anchor="middle" class="ink">Input</text>
+  <text x="135" y="225" text-anchor="middle" class="small">brightness = 42</text>
+  <line x1="235" y1="205" x2="325" y2="205" class="arrow"/>
+  <rect x="325" y="155" width="270" height="100" rx="16" class="box"/>
+  <text x="460" y="195" text-anchor="middle" class="ink">Human-written rule</text>
+  <text x="460" y="225" text-anchor="middle" class="small">if brightness &lt; 50</text>
+  <line x1="595" y1="205" x2="685" y2="205" class="arrow"/>
+  <rect x="685" y="155" width="230" height="100" rx="16" class="box"/>
+  <text x="800" y="195" text-anchor="middle" class="ink">Output</text>
+  <text x="800" y="225" text-anchor="middle" class="small">dark theme</text>
+  <text x="35" y="305" class="ink">Machine learning</text>
+  <rect x="35" y="325" width="200" height="70" rx="16" class="box2"/>
+  <text x="135" y="354" text-anchor="middle" class="ink">Labeled examples</text>
+  <text x="135" y="379" text-anchor="middle" class="small">inputs + answers</text>
+  <line x1="235" y1="360" x2="325" y2="360" class="arrow"/>
+  <rect x="325" y="325" width="200" height="70" rx="16" class="box2"/>
+  <text x="425" y="354" text-anchor="middle" class="ink">Training</text>
+  <text x="425" y="379" text-anchor="middle" class="small">adjust settings</text>
+  <line x1="525" y1="360" x2="615" y2="360" class="arrow"/>
+  <rect x="615" y="325" width="160" height="70" rx="16" class="box2"/>
+  <text x="695" y="354" text-anchor="middle" class="ink">Model</text>
+  <text x="695" y="379" text-anchor="middle" class="small">learned function</text>
+  <line x1="775" y1="360" x2="865" y2="360" class="arrow"/>
+  <text x="930" y="354" text-anchor="middle" class="ink">Prediction</text>
+  <text x="930" y="379" text-anchor="middle" class="small">dark theme</text>
+  <circle class="pulse" cx="45" cy="205" r="8"><animate attributeName="cx" values="45;225;315;585;675;905" dur="5s" repeatCount="indefinite"/></circle>
+</svg>

@@ -1,0 +1,12 @@
+site/
+.cache/
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+.aidesigner/*
+!.aidesigner/.gitkeep
+
+# Large PDF library (795 MB), kept out of git
+AI-pdf-books-Master/
