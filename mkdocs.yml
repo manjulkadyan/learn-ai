@@ -1,6 +1,6 @@
 site_name: AI Engineering Learning Lab
 site_description: A beginner-first path from software engineering to professional AI and on-device ML.
-site_url: http://127.0.0.1:8000
+site_url: https://manjulkadyan.github.io/learn-ai/
 theme:
   name: material
   features:
